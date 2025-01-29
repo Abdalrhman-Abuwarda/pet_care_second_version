@@ -45,7 +45,7 @@ class ArticleCard extends StatelessWidget {
                 width: AppSize.s120.width,
                 child: ElevatedButton(
                   onPressed: () {
-                    RouteService.serviceNavi.pushNamedWidget(RouteGenerator.findVet);
+                    RouteService.serviceNavi.pushNamedWidget(RouteNames.findVet);
                   },
                   child: Text(
                     AppStrings.findVets,

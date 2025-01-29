@@ -75,7 +75,7 @@ class HomeProvider extends ChangeNotifier {
     notifyListeners();
 
     RouteService.serviceNavi.pushNamedWidget(
-      RouteGenerator.productDetailsScreen,
+      RouteNames.productDetailsScreen,
     );
   }
 }

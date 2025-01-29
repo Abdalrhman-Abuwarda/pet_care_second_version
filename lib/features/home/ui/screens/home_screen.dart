@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
           CustomIconButton(
             onTap: () {
               RouteService.serviceNavi
-                  .pushNamedWidget(RouteGenerator.searchScreen);
+                  .pushNamedWidget(RouteNames.searchScreen);
             },
             iconPath: IconAssets.search,
           ),
@@ -126,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       child: GestureDetector(
                                         onTap: () {
                                           RouteService.serviceNavi
-                                              .pushNamedWidget(RouteGenerator
+                                              .pushNamedWidget(RouteNames
                                                   .mainAddPetScreen);
                                         },
                                         child: CircleAvatar(
@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 textButton: AppStrings.seeAll,
                 onPressed: () {
                   RouteService.serviceNavi
-                      .pushNamedWidget(RouteGenerator.allPetShopScreen);
+                      .pushNamedWidget(RouteNames.allPetShopScreen);
                 },
               ),
               AppSize.s16.verticalSpace,
@@ -218,7 +218,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 textButton: AppStrings.seeAll,
                 onPressed: () {
                   RouteService.serviceNavi
-                      .pushNamedWidget(RouteGenerator.allVetsDoctorScreen);
+                      .pushNamedWidget(RouteNames.allVetsDoctorScreen);
 
                   // AllPetProducts
                 },
@@ -313,7 +313,7 @@ class AddReminderWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         RouteService.serviceNavi
-            .pushNamedWidget(RouteGenerator.addReminderScreen);
+            .pushNamedWidget(RouteNames.addReminderScreen);
       },
       child: Padding(
         padding: 24.paddingLeft,

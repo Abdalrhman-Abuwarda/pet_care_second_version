@@ -67,11 +67,11 @@ class AddNewAddressScreen extends StatelessWidget {
                     ),
                     AppSize.s16.verticalSpace,
                     ElevatedButton(onPressed: (){
-                      RouteService.serviceNavi.pushNamedWidget(RouteGenerator.mainAddPetScreen);
+                      RouteService.serviceNavi.pushNamedWidget(RouteNames.mainAddPetScreen);
                     },
                         child: const Text("Use this address")),
                     TextButton(onPressed: (){
-                      RouteService.serviceNavi.pushNamedWidget(RouteGenerator.addNewLocationManual);
+                      RouteService.serviceNavi.pushNamedWidget(RouteNames.addNewLocationManual);
                     }, child: Text("Add location manually" , style: bodyRegular(color: ColorManager.secondary),)),
                   ],
                 ),

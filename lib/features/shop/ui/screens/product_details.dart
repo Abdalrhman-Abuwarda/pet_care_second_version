@@ -46,7 +46,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                         InkWell(
                           onTap: () {
                             RouteService.serviceNavi
-                                .pushNamedWidget(RouteGenerator.cartScreen);
+                                .pushNamedWidget(RouteNames.cartScreen);
                           },
                           child: Center(
                             child: Badge(

@@ -84,7 +84,7 @@ class VerifyEmailScreen extends StatelessWidget {
               ElevatedButton(onPressed: (){
                 if(formKye.currentState!.validate()){
                   debugPrint("This is ok");
-                  RouteService.serviceNavi.pushNamedWidget(RouteGenerator.resetPasswordScreen);
+                  RouteService.serviceNavi.pushNamedWidget(RouteNames.resetPasswordScreen);
                 }
               }, child: const Text(AppStrings.next)),
               const Spacer(flex: 2,)

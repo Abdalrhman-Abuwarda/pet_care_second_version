@@ -85,6 +85,32 @@ Future<void> init() async {
   // sl.unregister<ArticleController>();
 }
 
+initAuth(){
+  if(!sl.isRegistered<AuthRepo>()){
+    sl.registerLazySingleton(() => AuthRepo(client: sl<DioClient>()));
+  }
+  if(!sl.isRegistered<AuthProvider>()){
+    sl.registerLazySingleton(() => AuthProvider());
+  }
+}
+
+disposeAuth(){
+  try {
+    debugPrint('Disposing auth dependencies');
+    if(sl.isRegistered<AuthRepo>()){
+      sl.unregister<AuthRepo>();
+    }
+    if(sl.isRegistered<AuthProvider>()){
+      final authProvider = sl<AuthProvider>();
+      authProvider.dispose();
+      sl.unregister<AuthProvider>();
+    }
+  } catch (e) {
+    debugPrint('Error during auth disposal: $e');
+    // Handle or report error as needed
+  }
+}
+
 initPets() {
   if (!sl.isRegistered<ArticleRepo>()) {
     sl.registerLazySingleton(() => PetRepo());

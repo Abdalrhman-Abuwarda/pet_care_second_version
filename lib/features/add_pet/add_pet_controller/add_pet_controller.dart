@@ -153,7 +153,7 @@ Future<dynamic> pickImage() async {
 
   selectPitImage(){
     if (fileImage != null) {
-      RouteService.serviceNavi.pushNamedWidget(RouteGenerator.successAddPatScreen);
+      RouteService.serviceNavi.pushNamedWidget(RouteNames.successAddPatScreen);
       disposeData();
     } else {
       Helpers.showSnackBar(message: "Please Add Photo For Your Pet");

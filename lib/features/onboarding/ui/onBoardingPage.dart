@@ -90,7 +90,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               ElevatedButton(
                 onPressed: () {
                   RouteService.serviceNavi
-                      .pushNamedReplacement(RouteGenerator.mainAuthScreen);
+                      .pushNamedReplacement(RouteNames.mainAuthScreen);
                 },
                 child: const Text(AppStrings.getStarted),
               ),
@@ -99,7 +99,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               TextButton(
                   onPressed: () {
                     RouteService.serviceNavi
-                        .pushNamedReplacement(RouteGenerator.mainAuthScreen);
+                        .pushNamedReplacement(RouteNames.mainAuthScreen);
                   },
                   child: Text(
                     AppStrings.skip,

@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: TextButton(
                           onPressed: () {
                             RouteService.serviceNavi.pushNamedWidget(
-                                RouteGenerator.forgetPasswordScreen);
+                                RouteNames.forgetPasswordScreen);
                           },
                           child: Text(
                             AppStrings.forgotPassword,

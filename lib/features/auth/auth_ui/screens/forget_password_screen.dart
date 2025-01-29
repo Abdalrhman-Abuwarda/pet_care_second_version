@@ -49,7 +49,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                     if (formKye.currentState!.validate()) {
                       debugPrint("Its Ok Pro");
                       RouteService.serviceNavi
-                          .pushNamedWidget(RouteGenerator.verifyEmailScreen);
+                          .pushNamedWidget(RouteNames.verifyEmailScreen);
                     }
                   },
                   child: const Text(AppStrings.submit)),

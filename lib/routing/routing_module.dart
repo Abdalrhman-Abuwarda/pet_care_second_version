@@ -2,6 +2,7 @@ library routing_module;
 
 import 'package:flutter/material.dart';
 import 'package:pet_care_second_version/features/article/article_module.dart';
+import 'package:pet_care_second_version/features/auth/auth_contoller/auth_provider.dart';
 import 'package:pet_care_second_version/features/auth/auth_ui/screens/splash_screen.dart';
 import 'package:pet_care_second_version/features/home/controllers/search_provider.dart';
 import 'package:pet_care_second_version/features/home/ui/home_ui_module.dart';
@@ -23,6 +24,6 @@ import '../features/shop/controllers/order_Inforamtion_provider.dart';
 import '../features/shop/controllers/product_provider.dart';
 import '../features/shop/ui/screens/shop_screens.dart';
 
-part 'route_generator.dart';
+part 'route_names.dart';
 part 'route_service.dart';
 part 'routes_generate.dart';

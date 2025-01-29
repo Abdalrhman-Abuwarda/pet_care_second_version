@@ -176,7 +176,7 @@ class CartScreen extends StatelessWidget {
                   ? null
                   : () {
                       RouteService.serviceNavi.pushNamedWidget(
-                          RouteGenerator.orderInformationScreen);
+                          RouteNames.orderInformationScreen);
                     },
               child: const Text("Checkout"),
             ),

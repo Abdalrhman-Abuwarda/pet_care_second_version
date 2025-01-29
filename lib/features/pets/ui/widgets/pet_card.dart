@@ -53,7 +53,7 @@ class PetCard extends StatelessWidget {
                       CustomIconButton(
                           onTap: () {
                             RouteService.serviceNavi
-                                .pushNamedWidget(RouteGenerator.editPetInfo);
+                                .pushNamedWidget(RouteNames.editPetInfo);
                           },
                           iconPath: IconAssets.edit)
                     ],

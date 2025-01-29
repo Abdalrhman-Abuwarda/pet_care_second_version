@@ -15,10 +15,10 @@ class AppConfig extends ChangeNotifier {
   onDoneLoading() async {
     if (shared.accessToken == "") {
       RouteService.serviceNavi
-          .pushNamedAndRemoveUtils(RouteGenerator.mainAuthScreen);
+          .pushNamedAndRemoveUtils(RouteNames.mainAuthScreen);
     } else {
       RouteService.serviceNavi
-          .pushNamedAndRemoveUtils(RouteGenerator.mainScreenApp);
+          .pushNamedAndRemoveUtils(RouteNames.mainScreenApp);
     }
   }
 }

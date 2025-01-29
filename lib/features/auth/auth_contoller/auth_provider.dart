@@ -15,6 +15,9 @@ class AuthProvider extends ChangeNotifier {
 
   late TabController tabController;
 
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
   changeCurrantTap(int index) {
     currantAuthTap = index;
     notifyListeners();
@@ -37,7 +40,7 @@ class AuthProvider extends ChangeNotifier {
       isLoading = false;
       notifyListeners();
       RouteService.serviceNavi
-          .pushNamedReplacement(RouteGenerator.addNewLocation);
+          .pushNamedReplacement(RouteNames.addNewLocation);
     } catch (e) {
       debugPrint("This is the error $e");
       isLoading = false;
@@ -68,5 +71,10 @@ class AuthProvider extends ChangeNotifier {
       isLoading = false;
       notifyListeners();
     }
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }

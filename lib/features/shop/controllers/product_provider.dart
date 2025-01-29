@@ -110,7 +110,7 @@ class ProductProvider extends ChangeNotifier {
 
     print(singleProduct!.originalPrice);
     RouteService.serviceNavi.pushNamedWidget(
-      RouteGenerator.productDetailsScreen,
+      RouteNames.productDetailsScreen,
     );
   }
 

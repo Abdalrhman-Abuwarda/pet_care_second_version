@@ -15,7 +15,7 @@ class ProfileScreen extends StatelessWidget {
           CustomIconButton(
             onTap: () {
               RouteService.serviceNavi
-                  .pushNamedWidget(RouteGenerator.editProfileScreen);
+                  .pushNamedWidget(RouteNames.editProfileScreen);
             },
             iconPath: IconAssets.edit,
           ),
@@ -84,7 +84,7 @@ class ProfileScreen extends StatelessWidget {
                     ProfileTile(
                       onTap: () {
                         RouteService.serviceNavi.pushNamedWidget(
-                            RouteGenerator.paymentMethodScreen);
+                            RouteNames.paymentMethodScreen);
                       },
                       iconPath: IconAssets.payment,
                       title: AppStrings.paymentMethod,
@@ -93,7 +93,7 @@ class ProfileScreen extends StatelessWidget {
                     ProfileTile(
                       onTap: () {
                         RouteService.serviceNavi
-                            .pushNamedWidget(RouteGenerator.addressScreen);
+                            .pushNamedWidget(RouteNames.addressScreen);
                       },
                       iconPath: IconAssets.unSelectedHome,
                       title: AppStrings.addresses,
@@ -102,7 +102,7 @@ class ProfileScreen extends StatelessWidget {
                     ProfileTile(
                       onTap: () {
                         RouteService.serviceNavi
-                            .pushNamedWidget(RouteGenerator.ordersScreen);
+                            .pushNamedWidget(RouteNames.ordersScreen);
                       },
                       iconPath: IconAssets.unSelectedCart,
                       title: AppStrings.orders,
@@ -111,7 +111,7 @@ class ProfileScreen extends StatelessWidget {
                     ProfileTile(
                       onTap: () {
                         RouteService.serviceNavi
-                            .pushNamedWidget(RouteGenerator.appointmentsScreen);
+                            .pushNamedWidget(RouteNames.appointmentsScreen);
                       },
                       iconPath: IconAssets.calendar,
                       title: AppStrings.apointments,
@@ -121,7 +121,7 @@ class ProfileScreen extends StatelessWidget {
                     TextButton(
                         onPressed: () {
                           RouteService.serviceNavi.pushNamedAndRemoveUtils(
-                              RouteGenerator.mainAuthScreen);
+                              RouteNames.mainAuthScreen);
                           sl<StorageService>().removeUser();
                         },
                         child: Text(

@@ -6,8 +6,6 @@ import 'package:pet_care_second_version/utils/app_config.dart';
 import 'package:pet_care_second_version/utils/helper.dart';
 import 'package:provider/provider.dart';
 import 'package:pet_care_second_version/utils/extension/responsive_extension.dart';
-
-import 'features/auth/auth_contoller/auth_provider.dart';
 import 'features/home/controllers/home_provider.dart';
 import 'features/notification/provider/notification_provider.dart';
 import 'features/onboarding/core/on_boarding_provider.dart';
@@ -31,7 +29,6 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => OnBoardingProvider()),
         ChangeNotifierProvider.value(value: sl<ProductProvider>()),
-        ChangeNotifierProvider.value(value: sl<AuthProvider>()),
         ChangeNotifierProvider.value(value: sl<HomeProvider>()),
         ChangeNotifierProvider.value(value: sl<NotificationProvider>()),
         ChangeNotifierProvider.value(value: sl<BaseProvider>()),
@@ -48,7 +45,7 @@ class MyApp extends StatelessWidget {
               title: 'Pet Care',
               theme: ThemeManager.lightTheme,
               scaffoldMessengerKey: Helpers.scaffoldKey,
-              initialRoute: RouteGenerator.splashScreen,
+              initialRoute: RouteNames.splashScreen,
               navigatorKey: RouteService.serviceNavi.navKey,
               onGenerateRoute: RoutsGenerate.generateRoute,
             ),

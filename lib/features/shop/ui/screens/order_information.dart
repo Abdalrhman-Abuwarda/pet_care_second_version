@@ -70,7 +70,7 @@ class _OrderInformationScreenState extends State<OrderInformationScreen> {
                       TextButton(
                           onPressed: () {
                             RouteService.serviceNavi.pushNamedWidget(
-                                RouteGenerator.addNewLocationManual);
+                                RouteNames.addNewLocationManual);
                           },
                           child: Text(
                             "Change",
@@ -100,7 +100,7 @@ class _OrderInformationScreenState extends State<OrderInformationScreen> {
                         ),
                         onPressed: () {
                           RouteService.serviceNavi
-                              .pushNamedWidget(RouteGenerator.addNewCardScreen);
+                              .pushNamedWidget(RouteNames.addNewCardScreen);
                         },
                         label: Text(
                           "Add",
@@ -326,7 +326,7 @@ class _OrderInformationScreenState extends State<OrderInformationScreen> {
       floatingActionButton: ElevatedButton(
         child: const Text("Place order"),
         onPressed: () {
-          RouteService.serviceNavi.pushNamedWidget(RouteGenerator.orderSuccess);
+          RouteService.serviceNavi.pushNamedWidget(RouteNames.orderSuccess);
         },
       ),
     );

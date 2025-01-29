@@ -52,7 +52,7 @@ class ResetPasswordScreen extends StatelessWidget {
                   onPressed: () {
                     if (formKye.currentState!.validate()) {
                       debugPrint("This is ok");
-                      RouteService.serviceNavi.pushNamedReplacement(RouteGenerator.mainAuthScreen);
+                      RouteService.serviceNavi.pushNamedReplacement(RouteNames.mainAuthScreen);
                     }
                   },
                   child: const Text(AppStrings.change)),
